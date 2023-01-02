@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:todoist/controller/task_controller.dart';
 
+import '../utils/colors.dart';
+
 class HomeScreen extends StatelessWidget {
   HomeScreen({Key? key}) : super(key: key);
   final TaskController taskController = Get.put(TaskController());
@@ -18,8 +20,7 @@ class HomeScreen extends StatelessWidget {
               child: SizedBox(
                 height: size.height,
                 width: size.width,
-                child: Flex(
-                  direction: Axis.vertical,
+                child: Column(
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children:  [
@@ -32,8 +33,8 @@ class HomeScreen extends StatelessWidget {
                         const Divider(thickness: 2,),
                       ],
                     ),
-                     Flexible(
-                       fit: FlexFit.tight,
+                     Expanded(
+                       flex: 2,
                        child: Column(
                          crossAxisAlignment: CrossAxisAlignment.start,
                          children: [
@@ -69,8 +70,8 @@ class HomeScreen extends StatelessWidget {
                          ],
                        ),
                      ),
-                    Flexible(
-                      fit: FlexFit.tight,
+                    Expanded(
+                     flex: 2,
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
@@ -107,7 +108,7 @@ class HomeScreen extends StatelessWidget {
 
         floatingActionButton: FloatingActionButton(
             elevation: 0.0,
-            backgroundColor: const Color(0xFFE44332),
+            backgroundColor: ColorRes.buttonColor,
             onPressed: (){
               Get.toNamed('/createTask');
             },

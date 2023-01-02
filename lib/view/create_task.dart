@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 import 'package:todoist/model/task_model.dart';
 
 import '../controller/task_controller.dart';
+import '../utils/colors.dart';
 
 class CreateTask extends StatelessWidget {
   Task? task;
@@ -58,7 +59,7 @@ class CreateTask extends StatelessWidget {
                       alignment: Alignment.center,
                       height: 18,
                       width: 76,
-                      color: const Color(0xFFE44332),
+                      color: ColorRes.buttonColor,
                       child: Text("Task Title",style: Theme.of(context).textTheme.bodyLarge!.copyWith(color: const Color(0xFFFFFFFF),fontSize: 12),),
                     ),
                     Text("Task Title",style: Theme.of(context).textTheme.bodyLarge!.copyWith(color: const Color(0xFFFFFFFF),fontSize: 12)),
@@ -107,7 +108,7 @@ class CreateTask extends StatelessWidget {
 
           },
           style:  ButtonStyle(
-            backgroundColor: MaterialStateProperty.all<Color>(const Color(0xFFE44332)),
+            backgroundColor: MaterialStateProperty.all<Color>(ColorRes.buttonColor),
           ),
           child: const Text("Save"),
         ),
