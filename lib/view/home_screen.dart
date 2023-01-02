@@ -28,7 +28,7 @@ class HomeScreen extends StatelessWidget {
                       children: [
                         const SizedBox(height: 10,),
                         Text("DEC 27, 2020",style: Theme.of(context).textTheme.bodyLarge!.copyWith(color: const Color(0xFF000000),fontSize: 32,fontWeight: FontWeight.bold),),
-                        Text("5 incomplete, 5 completed",style: Theme.of(context).textTheme.bodyLarge!.copyWith(color: const Color(0xFF000000),fontSize: 14,fontWeight: FontWeight.w600),),
+                        Text("3 incomplete, 2 completed",style: Theme.of(context).textTheme.bodyLarge!.copyWith(color: const Color(0xFF000000),fontSize: 14,fontWeight: FontWeight.w600),),
                         const Divider(thickness: 2,),
                       ],
                     ),
